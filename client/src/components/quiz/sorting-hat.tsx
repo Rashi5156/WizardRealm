@@ -268,7 +268,7 @@ export default function SortingHat() {
             </button>
             <a 
               href="/"
-              className="px-6 py-3 rounded-full bg-gold hover:bg-gold/90 text-wizardDark font-display font-bold tracking-wide shadow-md hover:shadow-lg transition-all duration-300 inline-block"
+              className="px-6 py-3 rounded-full bg-gold hover:bg-gold/90 text-wizard-dark font-display font-bold tracking-wide shadow-md hover:shadow-lg transition-all duration-300 inline-block"
             >
               <Home className="inline mr-2" size={16} />
               Return Home

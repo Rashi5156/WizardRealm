@@ -16,7 +16,7 @@ export default function CharacterCard({ character }: CharacterCardProps) {
         {/* Card Front */}
         <div 
           className={`flip-card-front absolute w-full h-full rounded-lg overflow-hidden shadow-lg ${
-            isDark ? "bg-wizardLight" : "bg-parchment"
+            isDark ? "bg-wizard-light" : "bg-parchment"
           }`}
         >
           <img 
@@ -26,7 +26,7 @@ export default function CharacterCard({ character }: CharacterCardProps) {
           />
           <div className={`p-4 border-t-4 border-${character.house.toLowerCase()} h-1/4 flex flex-col justify-center`}>
             <h3 className="font-display text-xl font-semibold text-gold">{character.name}</h3>
-            <p className={`text-sm ${isDark ? "text-parchment/80" : "text-wizardDark/80"}`}>
+            <p className={`text-sm ${isDark ? "text-parchment/80" : "text-wizard-dark/80"}`}>
               {character.title}
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function CharacterCard({ character }: CharacterCardProps) {
         <div 
           className={`flip-card-back absolute w-full h-full rounded-lg overflow-hidden shadow-lg p-5 
             ${isDark ? `bg-${character.house.toLowerCase()}` : `bg-${character.house.toLowerCase()}/90`}
-            ${character.house.toLowerCase() === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment'}`}
+            ${character.house.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment'}`}
         >
           <h3 className="font-display text-xl font-semibold text-gold mb-3">{character.name}</h3>
           <div className={`text-sm space-y-2 ${character.house.toLowerCase() === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment'}`}>
