@@ -47,7 +47,7 @@ export default function HeroSection() {
         }`}
       ></div>
       <div 
-        className={`absolute inset-0 bg-wizardDark ${
+        className={`absolute inset-0 bg-wizard-dark ${
           isDark ? "opacity-40" : "opacity-10"
         }`}
       ></div>
@@ -66,15 +66,15 @@ export default function HeroSection() {
           Welcome to the Wizarding World
         </h1>
         <p className={`text-lg md:text-2xl mb-8 font-light max-w-2xl mx-auto ${
-          isDark ? "text-parchment" : "text-wizardDark"
+          isDark ? "text-parchment" : "text-wizard-dark"
         }`}>
           Explore the magic of Harry Potter and begin your magical journey at Hogwarts School of Witchcraft and Wizardry
         </p>
         <Link href="/characters">
-          <a className="inline-flex px-8 py-4 rounded-full bg-gryffindor hover:bg-gryffindor/90 text-parchment font-display text-lg font-bold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 items-center mx-auto group">
+          <span className="inline-flex px-8 py-4 rounded-full bg-gryffindor hover:bg-gryffindor/90 text-parchment font-display text-lg font-bold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 items-center mx-auto group cursor-pointer">
             <span>Begin Your Journey</span>
             <Wand2 className="ml-3 transition-transform duration-300 group-hover:rotate-12" />
-          </a>
+          </span>
         </Link>
       </div>
     </div>

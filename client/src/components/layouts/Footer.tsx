@@ -10,8 +10,8 @@ export default function Footer() {
     <footer 
       className={`py-8 px-4 border-t transition-colors duration-300 ${
         isDark 
-          ? "bg-wizardLight border-gold/20" 
-          : "bg-parchment/70 border-wizardDark/10"
+          ? "bg-wizard-light border-gold/20" 
+          : "bg-parchment/70 border-wizard-dark/10"
       }`}
     >
       <div className="container mx-auto">
@@ -24,7 +24,7 @@ export default function Footer() {
             />
             <div>
               <h2 className="font-display text-xl font-bold text-gold">Hogwarts Hub</h2>
-              <p className={`text-xs ${isDark ? "text-parchment/70" : "text-wizardDark/70"}`}>
+              <p className={`text-xs ${isDark ? "text-parchment/70" : "text-wizard-dark/70"}`}>
                 A fan-made Harry Potter experience
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function Footer() {
             </a>
           </div>
           
-          <p className={`text-sm text-center md:text-right ${isDark ? "text-parchment/70" : "text-wizardDark/70"}`}>
+          <p className={`text-sm text-center md:text-right ${isDark ? "text-parchment/70" : "text-wizard-dark/70"}`}>
             This is a fan-made website for educational purposes only.<br />
             Harry Potter © Warner Bros. Entertainment Inc.
           </p>
