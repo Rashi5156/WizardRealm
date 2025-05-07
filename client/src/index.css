@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode */
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Harry Potter specific theme colors */
+  --gryffindor: 0 100% 23%;        /* #740001 */
+  --slytherin: 150 45% 25%;        /* #1a472a */
+  --hufflepuff: 53 100% 50%;       /* #ffdb00 */
+  --ravenclaw: 226 63% 15%;        /* #0e1a40 */
+  --parchment: 48 56% 94%;         /* #f8f5e6 */
+  --gold: 46 59% 53%;              /* #d4af37 */
+  --wizard-dark: 240 33% 7%;       /* #0c0c14 */
+  --wizard-light: 228 29% 20%;     /* #232741 */
+}
+
+.dark {
+  /* Dark mode */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  .font-display {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Background patterns & images */
+.bg-parchment-texture {
+  background-image: url('https://pixabay.com/get/g04120fc5217106e6d2b7bbc300274be948d1d6c3d3a2d3a736808a52008b9dbc4f8a8d36f4f6ea828d8ea3975da8c0cc3d49390f6d6b82beaa34792b529c5c9b_1280.jpg');
+}
+
+.bg-hogwarts {
+  background-image: url('https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+}
+
+.bg-stars {
+  background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ravenclaw/90;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold rounded-sm;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-hufflepuff;
+}
+
+/* Animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s linear infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Flip card animation */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Magic sparkles */
+.magic-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 3px theme('colors.gold'), 0 0 5px theme('colors.hufflepuff');
+  animation: sparkle 1.5s linear infinite;
+}
