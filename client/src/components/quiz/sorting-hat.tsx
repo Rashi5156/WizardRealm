@@ -236,7 +236,7 @@ export default function SortingHat() {
           <div className="p-8">
             <div 
               className={`w-24 h-24 rounded-full bg-${houseResult.toLowerCase()} ${
-                houseResult.toLowerCase() === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment'
+                houseResult.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment'
               } mx-auto flex items-center justify-center mb-6`}
             >
               {resultData.icon === 'fire' && <Flame size={48} />}
@@ -248,19 +248,19 @@ export default function SortingHat() {
               You belong in {houseResult.toUpperCase()}!
             </h2>
             <p className={`text-lg mb-6 ${
-              isDark ? "text-parchment/90" : "text-wizardDark/90"
+              isDark ? "text-parchment/90" : "text-wizard-dark/90"
             }`}>
               "{resultData.verse}"
             </p>
             <p className={`mb-8 ${
-              isDark ? "text-parchment/80" : "text-wizardDark/80"
+              isDark ? "text-parchment/80" : "text-wizard-dark/80"
             }`}>
               {resultData.description}
             </p>
             <button 
               onClick={startQuiz}
               className={`px-6 py-3 rounded-full bg-${houseResult.toLowerCase()} hover:bg-${houseResult.toLowerCase()}/90 ${
-                houseResult.toLowerCase() === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment'
+                houseResult.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment'
               } font-display font-bold tracking-wide shadow-md hover:shadow-lg transition-all duration-300 mr-4`}
             >
               <RefreshCcw className="inline mr-2" size={16} />
