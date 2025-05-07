@@ -12,7 +12,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-300 ${
-      theme === "dark" ? "bg-wizardDark text-parchment" : "bg-parchment text-wizardDark"
+      theme === "dark" ? "bg-wizard-dark text-parchment" : "bg-parchment text-wizard-dark"
     }`}>
       <Navbar />
       <main className="flex-grow">

@@ -26,8 +26,8 @@ export default function Navbar() {
     <nav 
       className={`sticky top-0 z-50 shadow-md px-4 py-3 border-b transition-colors duration-300 ${
         isDark 
-          ? "bg-wizardDark border-gold/30" 
-          : "bg-parchment border-wizardDark/20"
+          ? "bg-wizard-dark border-gold/30" 
+          : "bg-parchment border-wizard-dark/20"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -39,7 +39,7 @@ export default function Navbar() {
           />
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-gold">
             Hogwarts
-            <span className={`hidden sm:inline ${isDark ? "text-parchment" : "text-wizardDark"}`}>
+            <span className={`hidden sm:inline ${isDark ? "text-parchment" : "text-wizard-dark"}`}>
               {" "}Hub
             </span>
           </h1>
@@ -75,7 +75,7 @@ export default function Navbar() {
           
           <button
             onClick={toggleMenu}
-            className={`p-2 focus:outline-none ${isDark ? "text-parchment" : "text-wizardDark"}`}
+            className={`p-2 focus:outline-none ${isDark ? "text-parchment" : "text-wizard-dark"}`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X /> : <Menu />}
@@ -86,8 +86,8 @@ export default function Navbar() {
             <div 
               className={`absolute right-4 top-16 w-48 py-2 rounded-md shadow-xl z-50 ${
                 isDark 
-                  ? "bg-wizardLight border border-gold/30" 
-                  : "bg-parchment border border-wizardDark/20"
+                  ? "bg-wizard-light border border-gold/30" 
+                  : "bg-parchment border border-wizard-dark/20"
               }`}
             >
               {navItems.map((item) => (

@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "@/hooks/useTheme";
 import { useQuery } from "@tanstack/react-query";
 import { Wand2, RefreshCcw, Home } from "lucide-react";
+import { Spell } from "@shared/schema";
 
 interface SpellGame {
   score: number;
-  currentSpell: { name: string; effect: string } | null;
+  currentSpell: Spell | null;
   options: string[];
   level: number;
   maxLevel: number;
@@ -27,7 +28,7 @@ export default function SpellChallenge() {
   });
 
   // Fetch spells data
-  const { data: spells, isLoading } = useQuery({
+  const { data: spells = [], isLoading } = useQuery<Spell[]>({
     queryKey: ['/api/spells'],
   });
 
