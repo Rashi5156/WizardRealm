@@ -18,12 +18,12 @@ export default function SortingHat() {
   const [houseResult, setHouseResult] = useState("");
 
   // Fetch quiz questions
-  const { data: questions, isLoading: questionsLoading } = useQuery({
+  const { data: questions, isLoading: questionsLoading } = useQuery<HouseQuizQuestion[]>({
     queryKey: ['/api/quiz/questions'],
   });
 
   // Fetch houses data for the intro
-  const { data: houses, isLoading: housesLoading } = useQuery({
+  const { data: houses, isLoading: housesLoading } = useQuery<any[]>({
     queryKey: ['/api/houses'],
   });
 
@@ -145,8 +145,8 @@ export default function SortingHat() {
         
         {/* Question */}
         <div 
-          className={`bg-wizardLight rounded-lg p-6 shadow-lg ${
-            isDark ? "bg-wizardLight" : "bg-white/90 border border-wizardDark/10"
+          className={`bg-wizard-light rounded-lg p-6 shadow-lg ${
+            isDark ? "bg-wizard-light" : "bg-white/90 border border-wizard-dark/10"
           }`}
         >
           <h2 className="font-display text-2xl text-gold mb-6">
@@ -172,7 +172,7 @@ export default function SortingHat() {
               };
               
               const houseStyle = houseStyles[letter as keyof typeof houseStyles];
-              const textColor = houseStyle === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment';
+              const textColor = houseStyle === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment';
               
               return (
                 <button 
@@ -180,8 +180,8 @@ export default function SortingHat() {
                   onClick={() => submitAnswer(letter)}
                   className={`w-full text-left p-4 rounded-lg transition-colors duration-300 flex items-center ${
                     isDark 
-                      ? `hover:bg-${houseStyle}/30 bg-wizardDark/30` 
-                      : `hover:bg-${houseStyle}/10 bg-wizardDark/5`
+                      ? `hover:bg-${houseStyle}/30 bg-wizard-dark/30` 
+                      : `hover:bg-${houseStyle}/10 bg-wizard-dark/5`
                   }`}
                 >
                   <span className={`bg-${houseStyle} ${textColor} h-8 w-8 rounded-full flex items-center justify-center mr-3`}>
@@ -226,9 +226,9 @@ export default function SortingHat() {
     return (
       <div className="container mx-auto px-4 py-16 max-w-4xl text-center">
         <div 
-          className={`bg-wizardLight rounded-lg overflow-hidden shadow-xl ${
+          className={`bg-wizard-light rounded-lg overflow-hidden shadow-xl ${
             isDark 
-              ? "bg-wizardLight" 
+              ? "bg-wizard-light" 
               : `bg-white/90 border border-${houseResult.toLowerCase()}/20`
           }`}
         >

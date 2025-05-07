@@ -49,8 +49,8 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <Link key={item.path} href={item.path}>
-              <a 
-                className={`nav-item font-display tracking-wide transition-all duration-300 relative ${
+              <span 
+                className={`nav-item font-display tracking-wide transition-all duration-300 relative cursor-pointer ${
                   location === item.path 
                     ? "text-gold font-semibold" 
                     : "hover:text-gold"
@@ -62,7 +62,7 @@ export default function Navbar() {
                     location === item.path ? "scale-x-100" : ""
                   }`}
                 ></span>
-              </a>
+              </span>
             </Link>
           ))}
           
@@ -92,14 +92,14 @@ export default function Navbar() {
             >
               {navItems.map((item) => (
                 <Link key={item.path} href={item.path}>
-                  <a
+                  <span
                     onClick={closeMenu}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gold/20 transition-colors duration-150 block ${
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gold/20 transition-colors duration-150 block cursor-pointer ${
                       location === item.path ? "font-semibold text-gold" : ""
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </div>

@@ -96,7 +96,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-ravenclaw/90;
+  @apply bg-wizard-dark/90;
 }
 
 ::-webkit-scrollbar-thumb {
