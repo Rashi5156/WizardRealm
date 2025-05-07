@@ -74,7 +74,7 @@ export default function SortingHat() {
         <div className="relative z-10 container mx-auto max-w-4xl text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-gold mb-6">Which Hogwarts House Are You?</h1>
           <p className={`text-lg mb-12 max-w-2xl mx-auto ${
-            isDark ? "text-parchment/90" : "text-wizardDark/90"
+            isDark ? "text-parchment/90" : "text-wizard-dark/90"
           }`}>
             "There's nothing hidden in your head the Sorting Hat can't see..."<br />
             Take this quiz to discover which of the four Hogwarts houses you truly belong to!
@@ -88,7 +88,7 @@ export default function SortingHat() {
                 <div 
                   key={house.id}
                   className={`bg-${house.name.toLowerCase()} rounded-lg p-4 shadow-lg text-center ${
-                    house.name.toLowerCase() === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment'
+                    house.name.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment'
                   }`}
                 >
                   <img 

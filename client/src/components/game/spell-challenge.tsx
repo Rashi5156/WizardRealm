@@ -131,8 +131,8 @@ export default function SpellChallenge() {
           </p>
           
           <div 
-            className={`bg-wizardLight p-6 rounded-lg shadow-lg max-w-2xl mx-auto mb-12 ${
-              isDark ? "bg-wizardLight" : "bg-white/90"
+            className={`bg-wizard-light p-6 rounded-lg shadow-lg max-w-2xl mx-auto mb-12 ${
+              isDark ? "bg-wizard-light" : "bg-white/90"
             }`}
           >
             <h2 className="font-display text-2xl text-gold mb-4">How to Play</h2>
@@ -199,8 +199,8 @@ export default function SpellChallenge() {
         
         {/* Spell Question */}
         <div 
-          className={`bg-wizardLight rounded-lg p-6 shadow-lg mb-6 text-center ${
-            isDark ? "bg-wizardLight" : "bg-white/90 border border-gold/20"
+          className={`bg-wizard-light rounded-lg p-6 shadow-lg mb-6 text-center ${
+            isDark ? "bg-wizard-light" : "bg-white/90 border border-gold/20"
           }`}
         >
           <h2 className="font-display text-3xl text-gold mb-6">
@@ -219,8 +219,8 @@ export default function SpellChallenge() {
                 onClick={() => checkAnswer(option)}
                 className={`w-full p-4 rounded-lg transition-colors duration-300 text-center ${
                   isDark 
-                    ? "hover:bg-ravenclaw/30 bg-wizardDark/30" 
-                    : "hover:bg-ravenclaw/10 bg-wizardDark/5"
+                    ? "hover:bg-ravenclaw/30 bg-wizard-dark/30" 
+                    : "hover:bg-ravenclaw/10 bg-wizard-dark/5"
                 }`}
               >
                 {option}
@@ -245,8 +245,8 @@ export default function SpellChallenge() {
     return (
       <div className="container mx-auto px-4 py-16 max-w-4xl text-center">
         <div 
-          className={`bg-wizardLight rounded-lg overflow-hidden shadow-xl ${
-            isDark ? "bg-wizardLight" : "bg-white/90 border border-ravenclaw/20"
+          className={`bg-wizard-light rounded-lg overflow-hidden shadow-xl ${
+            isDark ? "bg-wizard-light" : "bg-white/90 border border-ravenclaw/20"
           }`}
         >
           <div className="bg-ravenclaw h-8"></div>
@@ -256,12 +256,12 @@ export default function SpellChallenge() {
             </div>
             <h2 className="font-display text-4xl text-gold mb-4">Challenge Complete!</h2>
             <p className={`text-lg mb-6 ${
-              isDark ? "text-parchment/90" : "text-wizardDark/90"
+              isDark ? "text-parchment/90" : "text-wizard-dark/90"
             }`}>
               You've completed the Spell Challenge with a score of <span className="font-bold text-gold">{game.score}</span> points!
             </p>
             <p className={`mb-8 ${
-              isDark ? "text-parchment/80" : "text-wizardDark/80"
+              isDark ? "text-parchment/80" : "text-wizard-dark/80"
             }`}>
               {game.score >= 40 ? (
                 <span>Outstanding! Professor Flitwick would be impressed by your spell knowledge!</span>
@@ -280,7 +280,7 @@ export default function SpellChallenge() {
             </button>
             <a
               href="/"
-              className="px-6 py-3 rounded-full bg-gold hover:bg-gold/90 text-wizardDark font-display font-bold tracking-wide shadow-md hover:shadow-lg transition-all duration-300 inline-block"
+              className="px-6 py-3 rounded-full bg-gold hover:bg-gold/90 text-wizard-dark font-display font-bold tracking-wide shadow-md hover:shadow-lg transition-all duration-300 inline-block"
             >
               <Home className="inline mr-2" size={16} />
               Return Home
