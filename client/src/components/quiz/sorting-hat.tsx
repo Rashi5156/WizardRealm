@@ -98,7 +98,7 @@ export default function SortingHat() {
                   />
                   <h2 className="font-display text-xl">{house.name}</h2>
                   <p className={`text-sm mt-2 ${
-                    house.name.toLowerCase() === 'hufflepuff' ? 'text-wizardDark/80' : 'text-parchment/80'
+                    house.name.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark/80' : 'text-parchment/80'
                   }`}>
                     {house.traits}
                   </p>
@@ -109,7 +109,7 @@ export default function SortingHat() {
           
           <button 
             onClick={startQuiz}
-            className="px-8 py-4 rounded-full bg-gold hover:bg-gold/90 text-wizardDark font-display text-lg font-bold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center mx-auto"
+            className="px-8 py-4 rounded-full bg-gold hover:bg-gold/90 text-wizard-dark font-display text-lg font-bold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center mx-auto"
           >
             <HardHat className="mr-3" />
             <span>Start Sorting Quiz</span>
@@ -130,7 +130,7 @@ export default function SortingHat() {
     return (
       <div className="container mx-auto px-4 py-12 max-w-3xl">
         {/* Progress Bar */}
-        <div className="w-full bg-wizardLight rounded-full h-2.5 mb-8">
+        <div className="w-full bg-wizard-light rounded-full h-2.5 mb-8">
           <div 
             className={`h-2.5 rounded-full transition-all duration-500 ease-out ${
               currentQuestion === 0 ? 'bg-gryffindor' :
@@ -215,7 +215,7 @@ export default function SortingHat() {
           <p>Something went wrong. Please try again.</p>
           <button 
             onClick={startQuiz}
-            className="px-6 py-3 mt-4 rounded-full bg-gold hover:bg-gold/90 text-wizardDark font-display font-bold"
+            className="px-6 py-3 mt-4 rounded-full bg-gold hover:bg-gold/90 text-wizard-dark font-display font-bold"
           >
             Try Again
           </button>
