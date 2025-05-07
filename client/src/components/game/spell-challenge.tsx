@@ -124,7 +124,7 @@ export default function SpellChallenge() {
         <div className="relative z-10 container mx-auto max-w-4xl text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-gold mb-6">Spell Challenge</h1>
           <p className={`text-lg mb-12 max-w-2xl mx-auto ${
-            isDark ? "text-parchment/90" : "text-wizardDark/90"
+            isDark ? "text-parchment/90" : "text-wizard-dark/90"
           }`}>
             Test your knowledge of magical spells from the Wizarding World!<br />
             Match each spell with its correct effect to earn points.
@@ -137,7 +137,7 @@ export default function SpellChallenge() {
           >
             <h2 className="font-display text-2xl text-gold mb-4">How to Play</h2>
             <ul className={`text-left space-y-3 pl-5 ${
-              isDark ? "text-parchment/90" : "text-wizardDark/90"
+              isDark ? "text-parchment/90" : "text-wizard-dark/90"
             }`}>
               <li className="flex">
                 <Wand2 className="text-gold mr-3 mt-1 flex-shrink-0" size={18} />
@@ -207,7 +207,7 @@ export default function SpellChallenge() {
             {game.currentSpell.name}
           </h2>
           <p className={`mb-8 ${
-            isDark ? "text-parchment/90" : "text-wizardDark/90"
+            isDark ? "text-parchment/90" : "text-wizard-dark/90"
           }`}>
             What is the effect of this spell?
           </p>

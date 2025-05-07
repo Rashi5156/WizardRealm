@@ -39,7 +39,7 @@ export default function CharacterCard({ character }: CharacterCardProps) {
             ${character.house.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment'}`}
         >
           <h3 className="font-display text-xl font-semibold text-gold mb-3">{character.name}</h3>
-          <div className={`text-sm space-y-2 ${character.house.toLowerCase() === 'hufflepuff' ? 'text-wizardDark' : 'text-parchment'}`}>
+          <div className={`text-sm space-y-2 ${character.house.toLowerCase() === 'hufflepuff' ? 'text-wizard-dark' : 'text-parchment'}`}>
             <p><span className="font-bold">House:</span> {character.house}</p>
             <p><span className="font-bold">Wand:</span> {character.wand}</p>
             <p><span className="font-bold">Patronus:</span> {character.patronus || 'Unknown'}</p>
